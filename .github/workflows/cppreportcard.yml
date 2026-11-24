@@ -55,7 +55,7 @@ jobs:
           python3 validation/test-cppcheck-model.py --compile-commands build/report-compile-commands.json
       - name: Generate quality report
         if: ${{ !cancelled() && steps.analysis_inputs.outcome == 'success' }}
-        uses: soulteary/cppreportcard-action@9458d052f286c576d557c34d8ad43096cedbf561 # v1.0.2
+        uses: soulteary/cppreportcard-action@8de72292324308064276a8feca167d543828d218 # v1.0.4
         with:
           mode: full
           config: .cppreportcard.json
